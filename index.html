@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pau Valdés Rochín · Coach Vocacional</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#inicio" class="brand">
+      <img src="img/logo6.png" alt="Pau Valdés Rochín">
+      <span>Coach Vocacional</span>
+    </a>
+    <div class="menu">
+      <a href="#inicio">Inicio</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#acompanamiento">¿Cómo trabajo?</a>
+      <a href="#about">Sobre mí</a>
+    </div>
+    <a href="https://wa.me/5215585758726?text=Hola%20Pau%2C%20vi%20tu%20pagina%20y%20me%20interesa%20saber%20mas%20sobre%20el%20coaching%20vocacional" target="_blank" rel="noopener" class="btn-primary magnetic">¡Contáctame!</a>
+  </div>
+</nav>
+
+<!-- ============ RIEL LATERAL (scrollspy) ============ -->
+<nav class="rail" aria-label="Navegación por sección">
+  <a href="#inicio" data-label="Inicio" class="active"></a>
+  <a href="#norma" data-label="No saber qué estudiar"></a>
+  <a href="#quiz" data-label="Quiz"></a>
+  <a href="#acompanamiento" data-label="Mi acompañamiento"></a>
+  <a href="#quienes" data-label="¿A quién ayudo?"></a>
+  <a href="#testimonios" data-label="Testimonios"></a>
+  <a href="#about" data-label="Sobre mí"></a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header id="inicio" class="hero">
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span>Coach vocacional para jóvenes</span>
+      <h1>De la confusión a la <em>claridad</em></h1>
+      <p class="lead">Acompaño a jóvenes a conocerse, explorar sus posibilidades y tomar una de las decisiones más importantes de su vida con claridad y confianza.</p>
+      <div class="hero-acciones">
+        <a class="btn-primary magnetic" href="https://calendly.com/pau-coachvocacional/30min" target="_blank" rel="noopener">Agenda YA primera sesión GRATIS</a>
+        <a class="btn-outline magnetic" href="#quiz">Haz el quiz</a>
+      </div>
+      <p class="hero-note">· 100% personalizada.</p>
+    </div>
+    <div class="reveal hero-visual">
+      <img class="hero-photo" src="img/imagenprueba.jpeg" alt="Pau Valdés, coach vocacional">
+      <div class="hero-badge b1"><b data-count="200">0</b><span>acompañados</span></div>
+      <div class="hero-badge b2"><b data-count="8">0</b><span>años de experiencia</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ FRANJA DE CONFIANZA ============ -->
+<section class="confianza">
+  <div class="confianza-track">
+    <!-- [EDITAR] confirma con Pau las universidades reales donde entraron sus estudiantes -->
+    <span>Hoy estudian en Tec de Monterrey</span><span>UDEM</span><span>Ibero</span><span>UANL</span><span>ITESO</span><span>Anáhuac</span><span>UNAM</span><span>La Salle</span>
+    <span>Hoy estudian en Tec de Monterrey</span><span>UDEM</span><span>Ibero</span><span>UANL</span><span>ITESO</span><span>Anáhuac</span><span>UNAM</span><span>La Salle</span>
+  </div>
+</section>
+
+<!-- ============ NO SABER QUÉ ESTUDIAR ============ -->
+<section class="norma" id="norma">
+  <div class="wrap norma-grid">
+    <div class="reveal">
+      <h2>No saber qué estudiar
+        <span class="tachado" id="tachado">es la norma.<i id="linea"></i></span>
+        <span class="correccion" id="correccion"></span>
+      </h2>
+      <p class="cuerpo">La mayoría de los jóvenes nunca aprende realmente a tomar decisiones sobre su futuro. Por eso muchos terminan eligiendo una carrera desde la presión, el miedo o la desinformación. Mi trabajo consiste en acompañarlos a descubrir quiénes son antes de decidir hacia dónde quieren ir.</p>
+    </div>
+    <div class="reveal voces">
+      <p class="rotulo">Lo que escucho en primera sesión</p>
+      <p class="voz" id="voz">"Mis papás quieren que estudie medicina y yo ni sé si me gusta."</p>
+      <p class="voz-quien" id="voz-quien">Estudiante de 5º semestre</p>
+      <div class="voces-nav" id="voces-nav"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUIZ INTERACTIVO ============ -->
+<section class="quiz-section" id="quiz">
+  <div class="wrap">
+    <div class="reveal quiz-head">
+      <span class="eyebrow"><span class="dot"></span>Ponte a prueba</span>
+      <h2 class="sec-title">¿Qué tan clara tienes tu decisión?</h2>
+      <p class="sec-lead" style="margin-left:auto;margin-right:auto">4 preguntas rápidas. Sin registro, sin vueltas — solo para que veas en qué punto estás hoy.</p>
+    </div>
+
+    <div class="reveal quiz-card" id="quiz-card">
+      <div class="quiz-progress" id="quiz-progress">
+        <i class="active" data-i="0"><em></em></i>
+        <i data-i="1"><em></em></i>
+        <i data-i="2"><em></em></i>
+        <i data-i="3"><em></em></i>
+      </div>
+
+      <div class="quiz-step active" data-step="0">
+        <h3>¿Qué tan seguro/a te sientes hoy sobre qué estudiar?</h3>
+        <div class="quiz-opciones">
+          <button class="quiz-op" data-v="0">Nada seguro/a, ni idea por dónde empezar</button>
+          <button class="quiz-op" data-v="1">Tengo un par de opciones, pero dudo</button>
+          <button class="quiz-op" data-v="2">Tengo una idea clara, quiero confirmarla</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="1">
+        <h3>¿De dónde viene más la presión que sientes?</h3>
+        <div class="quiz-opciones">
+          <button class="quiz-op" data-v="0">De mi familia o de lo que "se espera" de mí</button>
+          <button class="quiz-op" data-v="1">De no saber si voy a poder vivir de eso</button>
+          <button class="quiz-op" data-v="2">De mí mismo/a, quiero decidir bien</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="2">
+        <h3>Cuando piensas en tu futuro, ¿qué sientes más?</h3>
+        <div class="quiz-opciones">
+          <button class="quiz-op" data-v="0">Confusión o ansiedad</button>
+          <button class="quiz-op" data-v="1">Curiosidad, pero con muchas dudas</button>
+          <button class="quiz-op" data-v="2">Emoción, solo me falta un empujón</button>
+        </div>
+      </div>
+
+      <div class="quiz-step" data-step="3">
+        <h3>¿Has hablado con alguien que te ayude a ver esto con claridad?</h3>
+        <div class="quiz-opciones">
+          <button class="quiz-op" data-v="0">No, lo he pensado solo/a todo este tiempo</button>
+          <button class="quiz-op" data-v="1">Con mis papás o amigos, pero falta algo más</button>
+          <button class="quiz-op" data-v="2">Estoy buscando a la persona correcta</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="quiz-result">
+        <div class="quiz-gauge">
+          <svg width="132" height="132" viewBox="0 0 132 132">
+            <defs>
+              <linearGradient id="gaugeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--malva)"/>
+                <stop offset="100%" stop-color="var(--verde-claro)"/>
+              </linearGradient>
+            </defs>
+            <circle class="track" cx="66" cy="66" r="54"/>
+            <circle class="fill" id="quiz-gauge-fill" cx="66" cy="66" r="54"/>
+          </svg>
+          <div class="pct" id="quiz-pct">0%</div>
+        </div>
+        <h3 id="quiz-titulo">Estás en modo exploración</h3>
+        <p id="quiz-texto">Y está bien no tener todo claro todavía. Un acompañamiento 1:1 te puede ahorrar meses de dar vueltas solo/a.</p>
+        <a class="btn-primary magnetic" href="https://calendly.com/pau-coachvocacional/30min" target="_blank" rel="noopener">Agenda tu primera sesión GRATIS</a>
+        <br>
+        <button class="quiz-restart" id="quiz-restart">Volver a hacer el quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MI ACOMPAÑAMIENTO ============ -->
+<section class="acomp" id="acompanamiento">
+  <div class="wrap">
+    <div class="reveal acomp-head">
+      <span class="eyebrow"><span class="dot"></span>Mi acompañamiento</span>
+      <p class="sub">No se trata únicamente de elegir una carrera. Se trata de construir un proyecto de vida desde el autoconocimiento, la estrategia y la confianza.</p>
+      <p class="posicion">No solo te ayudo a elegir una carrera, te acompaño a:</p>
+      <p class="note">Toca cada punto para ver de qué se trata — a través de un acompañamiento 100% personalizado.</p>
+    </div>
+
+    <div class="timeline reveal">
+      <div class="timeline-rail"><em id="timeline-fill"></em></div>
+      <div class="pasos" id="pasos">
+        <button class="paso" aria-expanded="true">
+          <div class="nudo">01</div>
+          <h3>Descubrir qué realmente le motiva.</h3>
+          <p class="resumen">No solo qué le gusta.</p>
+          <div class="paso-detalle"><p>No solo qué le gusta, sino qué lo mueve a construir un proyecto de vida.</p></div>
+        </button>
+        <button class="paso" aria-expanded="false">
+          <div class="nudo">02</div>
+          <h3>Reconocer sus talentos y fortalezas.</h3>
+          <p class="resumen">Más allá de un test.</p>
+          <div class="paso-detalle"><p>Más allá de un test, comprender en qué puede destacar de verdad.</p></div>
+        </button>
+        <button class="paso" aria-expanded="false">
+          <div class="nudo">03</div>
+          <h3>Tomar decisiones con claridad y confianza.</h3>
+          <p class="resumen">No una corazonada.</p>
+          <div class="paso-detalle"><p>Comparamos opciones, pros y contras, y cerramos con una decisión que puede sostener.</p></div>
+        </button>
+        <button class="paso" aria-expanded="false">
+          <div class="nudo">04</div>
+          <h3>Construir un camino académico con propósito.</h3>
+          <p class="resumen">No al azar.</p>
+          <div class="paso-detalle"><p>Diseñamos un plan de estudios y de vida con sentido, no una carrera elegida al azar.</p></div>
+        </button>
+        <button class="paso" aria-expanded="false">
+          <div class="nudo">05</div>
+          <h3>Salir con un plan de acción claro.</h3>
+          <p class="resumen">Con fechas y pasos.</p>
+          <div class="paso-detalle"><p>Con fechas, pasos concretos y seguimiento durante todo el proceso de admisión.</p></div>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉNES ============ -->
+<section id="quienes" class="who">
+  <div class="wrap">
+    <div class="reveal who-head">
+      <span class="eyebrow"><span class="dot"></span>¿A quién puedo ayudar?</span>
+      <h2 class="sec-title">Un acompañamiento diseñado para cada etapa de la decisión.</h2>
+    </div>
+    <div class="who-grid">
+      <div class="reveal who-card">
+        <div class="who-card-inner tilt">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=700&q=80" alt="Estudiantes">
+          <div class="label"><h3>Estudiantes de preparatoria</h3><p>¿Estás por tomar decisiones importantes sobre tu futuro y no sabes por dónde empezar?</p></div>
+        </div>
+      </div>
+      <div class="reveal who-card">
+        <div class="who-card-inner tilt">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80" alt="Jóvenes">
+          <div class="label"><h3>Universitarios</h3><p>Si empezaste una carrera y sientes que no era lo que esperabas, te acompaño a replantearla.</p></div>
+        </div>
+      </div>
+      <div class="reveal who-card">
+        <div class="who-card-inner tilt">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=700&q=80" alt="Padres de familia">
+          <div class="label"><h3>Padres de familia</h3><p>¿Quieres acompañar mejor a tu hijo en esta decisión?</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="padres-box reveal">
+      <p><strong>Para padres de familia:</strong> sé que no quieres imponerle un camino a tu hijo, pero tampoco quieres verlo perdido. Te acompaño también a ti, para que puedas apoyar su proceso sin controlarlo — y para que ambos lleguen a una decisión con la que se sientan tranquilos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section id="testimonios" class="tm">
+  <div class="wrap tm-head reveal">
+    <span class="eyebrow"><span class="dot"></span>Historias reales</span>
+    <h2 class="sec-title">Lo que dicen los jóvenes que ya vivieron el proceso.</h2>
+  </div>
+
+  <div class="tm-row">
+    <div class="tm-track">
+      <article class="tm-card"><img class="tm-ava" src="img/MateoR.jpeg" alt="Mateo R."><p>"Gracias al coaching aprendí a entenderme a mí mismo y a tomar decisiones con calma. No solo cambió mi futuro, cambió mi forma de ver la vida."</p><h3>Mateo R.</h3></article>
+      <article class="tm-card"><img class="tm-ava" src="img/AndresZ.jpeg" alt="Andrés Z."><p>"Me sentía perdido y no sabía qué hacer. Gracias al coaching descubrí muchas más oportunidades de las que imaginaba, encontré el camino que quiero seguir y hoy me siento tranquilo con mi futuro."</p><h3>Andrés Z.</h3></article>
+      <article class="tm-card"><img class="tm-ava" src="img/ReginaG.jpg" alt="Regina G."><p>"En lugar de sentirme nerviosa, hoy me siento cómoda y segura. Gracias al coaching encontré el camino que quiero seguir y sé qué quiero estudiar."</p><h3>Regina G.</h3></article>
+      <article class="tm-card"><div class="tm-ava">B</div><p>"Gracias a Pau, hoy me siento segura de lo que quiero estudiar y me emociona poder estudiar algo que me apasiona. También descubrí cómo me veo en mi futuro y el tipo de vida que quiero."</p><h3>Becky M.</h3></article>
+      <article class="tm-card"><div class="tm-ava">R</div><p>"Agradezco a Pau porque estuvo a cada momento conmigo guiándome y apoyándome. Gracias a su coaching, hoy ya me siento listo y ya no tengo miedo. El programa me dio la base para encontrarme a mí mismo y la profesión que quiero."</p><h3>Roberto V.</h3></article>
+      <article class="tm-card"><div class="tm-ava">V</div><p>"El coaching me dio calma, claridad y la motivación para hacer realidad las cosas que tenía en mente. Ahora entiendo que los miedos que tenía eran solo pensamientos negativos. Hoy estoy más segura y tranquila porque sé que cada quien tiene un proceso diferente."</p><h3>Valentina M.</h3></article>
+
+      <!-- copia exacta — NO la borres (hace el loop) -->
+      <article class="tm-card"><img class="tm-ava" src="img/MateoR.jpeg" alt="Mateo R."><p>"Gracias al coaching aprendí a entenderme a mí mismo y a tomar decisiones con calma. No solo cambió mi futuro, cambió mi forma de ver la vida."</p><h3>Mateo R.</h3></article>
+      <article class="tm-card"><img class="tm-ava" src="img/AndresZ.jpeg" alt="Andrés Z."><p>"Me sentía perdido y no sabía qué hacer. Gracias al coaching descubrí muchas más oportunidades de las que imaginaba, encontré el camino que quiero seguir y hoy me siento tranquilo con mi futuro."</p><h3>Andrés Z.</h3></article>
+      <article class="tm-card"><img class="tm-ava" src="img/ReginaG.jpg" alt="Regina G."><p>"En lugar de sentirme nerviosa, hoy me siento cómoda y segura. Gracias al coaching encontré el camino que quiero seguir y sé qué quiero estudiar."</p><h3>Regina G.</h3></article>
+      <article class="tm-card"><div class="tm-ava">B</div><p>"Gracias a Pau, hoy me siento segura de lo que quiero estudiar y me emociona poder estudiar algo que me apasiona. También descubrí cómo me veo en mi futuro y el tipo de vida que quiero."</p><h3>Becky M.</h3></article>
+      <article class="tm-card"><div class="tm-ava">R</div><p>"Agradezco a Pau porque estuvo a cada momento conmigo guiándome y apoyándome. Gracias a su coaching, hoy ya me siento listo y ya no tengo miedo. El programa me dio la base para encontrarme a mí mismo y la profesión que quiero."</p><h3>Roberto V.</h3></article>
+      <article class="tm-card"><div class="tm-ava">V</div><p>"El coaching me dio calma, claridad y la motivación para hacer realidad las cosas que tenía en mente. Ahora entiendo que los miedos que tenía eran solo pensamientos negativos. Hoy estoy más segura y tranquila porque sé que cada quien tiene un proceso diferente."</p><h3>Valentina M.</h3></article>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="tm-banner">
+      <div class="tm-banner-track">
+        <span><b>Comienza ya</b> Primera sesión 1:1 gratuita <i>✦</i> Comienza ya <i>✦</i> Primera sesión 1:1 gratuita <i>✦</i> Comienza ya <i>✦</i> Primera sesión 1:1 gratuita <i>✦</i>&nbsp;</span>
+        <span><b>Comienza ya</b> Primera sesión 1:1 gratuita <i>✦</i> Comienza ya <i>✦</i> Primera sesión 1:1 gratuita <i>✦</i> Comienza ya <i>✦</i> Primera sesión 1:1 gratuita <i>✦</i>&nbsp;</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE MÍ ============ -->
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="reveal about-img">
+      <img src="img/imagenconocea.jpeg" alt="Pau Valdés">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow"><span class="dot"></span>Conoce a</span>
+      <h2>Pau Valdés Rochín</h2>
+      <p>Durante años ayudé a jóvenes a estudiar en el extranjero. Y fue ahí donde descubrí algo que cambió por completo mi manera de trabajar: muchos tenían claro a qué país querían ir, pero muy pocos sabían realmente quiénes eran.</p>
+      <p>Yo también estuve ahí. Elegí una carrera que terminé abandonando, y después estudié otra que tampoco ejercí muchos años. Durante mucho tiempo sentí que iba reaccionando a las oportunidades, en lugar de construir un camino propio.</p>
+      <p>Esa experiencia cambió por completo mi forma de ver la orientación vocacional. Hoy sé que el verdadero problema no es escoger una carrera: es tomar decisiones importantes sin conocerte.</p>
+      <p>Por eso creé <strong>C2C — De la Confusión a la Claridad</strong>, y hoy acompaño a jóvenes y familias a tomar decisiones académicas y de vida desde la claridad, no desde el miedo.</p>
+      <div class="stats">
+        <div class="stat"><div class="num"><span data-count="200">0</span>+</div><div class="lbl">estudiantes acompañados</div></div>
+        <div class="stat"><div class="num"><span data-count="20">0</span>+</div><div class="lbl">países de experiencia internacional</div></div>
+        <div class="stat"><div class="num">C2C</div><div class="lbl">método propio — De la Confusión a la Claridad</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="about-quote reveal">
+    <span class="star">✦</span>
+    <p>Creo en el poder del autoconocimiento para transformar decisiones... y vidas.</p>
+  </div>
+</section>
+
+<!-- ============ CIERRE ============ -->
+<section id="cta" class="cierre">
+  <div class="wrap reveal">
+    <h2>La decisión sigue siendo tuya. <em>El camino no tiene que ser solo.</em></h2>
+    <p>Agenda una sesión de diagnóstico gratuita y descubramos juntos cuál puede ser el mejor siguiente paso.</p>
+    <a class="btn-primary magnetic" href="https://calendly.com/pau-coachvocacional/30min" target="_blank" rel="noopener">Agenda YA primera sesión GRATIS</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="https://wa.me/5215585758726" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:pau.coachvocacional@gmail.com">Email</a>
+      <a href="https://www.instagram.com/pau.coachvocacional" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/paulinavald%C3%A9sroch%C3%ADn/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.thegate-education.com/" target="_blank" rel="noopener">The Gate Education</a>
+    </div>
+    <p>© 2026 Pau Valdés Rochín · Coach Vocacional. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
