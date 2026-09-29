@@ -322,13 +322,14 @@ img.tm-ava{object-fit:cover;object-position:center 25%}
 /* =========================================================
    SOBRE MÍ
    ========================================================= */
-.about{background:var(--malva-oscuro);color:#fff;border-radius:40px;margin:0 auto;max-width:1180px}
-.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center;padding:0 56px}
-.about-img{border-radius:28px;overflow:hidden;height:560px;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
-.about-img img{width:100%;height:100%;object-fit:cover}
+.about{background:var(--malva-oscuro);color:#fff;border-radius:40px;margin:0 auto;max-width:1180px;padding:80px 0 56px}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start;padding:0 56px}
+/* foto 4:5 como las demás tarjetas; se queda fija mientras se lee el texto */
+.about-img{border-radius:28px;overflow:hidden;aspect-ratio:4/5;position:sticky;top:120px;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
+.about-img img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
 .about .eyebrow{color:var(--dorado)}
 .about .eyebrow .dot{background:var(--malva-claro)}
-.about h2{font-size:clamp(32px,4vw,48px);margin:8px 0 22px;color:#fff}
+.about h2{font-size:clamp(32px,4vw,48px);margin:10px 0 24px;color:#fff}
 .about p{font-size:16px;line-height:1.8;color:#EAD9D6;margin-bottom:16px;max-width:58ch}
 .about strong{color:#fff}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
@@ -369,7 +370,8 @@ footer a:hover{text-decoration:underline}
   .pasos{grid-template-columns:1fr 1fr;gap:30px}
   .timeline-rail{display:none}
   .who-grid{grid-template-columns:1fr}
-  .about-img{height:340px}
+  .about{padding:64px 0 44px}
+  .about-img{position:static;aspect-ratio:auto;height:380px}
   .stats{grid-template-columns:1fr}
   .hero-badge{position:static;display:inline-block;margin:10px 8px 0 0;animation:none}
   .quiz-card{padding:32px 24px}
