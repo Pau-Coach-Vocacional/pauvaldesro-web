@@ -104,11 +104,13 @@ section{padding:110px 0;position:relative}
 /* =========================================================
    NAV
    ========================================================= */
-nav{position:sticky;top:0;z-index:60;background:rgba(250,246,239,.78);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+nav{position:sticky;top:0;z-index:60;border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
+/* el fondo y el blur van en ::before para que el botón de Contáctame pueda flotar abajo en celular */
+nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(250,246,239,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
 nav.scrolled{border-bottom-color:var(--borde);box-shadow:0 8px 24px -12px rgba(33,27,24,.12)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{height:42px;width:auto;display:block}
+.brand img{height:64px;width:auto;display:block}
 .brand span{font-family:var(--sans);font-size:10.5px;font-weight:600;letter-spacing:.16em;color:var(--tinta-suave);text-transform:uppercase;padding-left:12px;border-left:1px solid var(--borde)}
 .menu{display:flex;gap:30px}
 .menu a{font-family:var(--sans);font-size:14px;font-weight:500;text-decoration:none;color:var(--tinta);position:relative;padding-bottom:2px}
@@ -172,7 +174,7 @@ nav.scrolled{border-bottom-color:var(--borde);box-shadow:0 8px 24px -12px rgba(3
 /* =========================================================
    FRANJA DE CONFIANZA
    ========================================================= */
-.confianza{padding:36px 0;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
+.confianza{overflow:hidden;padding:36px 0;border-top:1px solid var(--borde);border-bottom:1px solid var(--borde)}
 .confianza-track{display:flex;gap:52px;width:max-content;animation:marquee 26s linear infinite}
 .confianza:hover .confianza-track{animation-play-state:paused}
 .confianza-track span{font-family:var(--serif);font-size:20px;font-style:italic;color:var(--tinta-suave);white-space:nowrap;opacity:.75}
@@ -371,9 +373,16 @@ footer a:hover{text-decoration:underline}
   .stats{grid-template-columns:1fr}
   .hero-badge{position:static;display:inline-block;margin:10px 8px 0 0;animation:none}
   .quiz-card{padding:32px 24px}
+
+  /* celular y iPad: logo más grande y Contáctame flotando abajo a la derecha */
+  .nav-inner{padding:10px 0}
+  .brand img{height:56px}
+  .nav-cta{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:70;padding:14px 24px}
+  footer{padding-bottom:96px}
 }
 @media(max-width:520px){
   .pasos{grid-template-columns:1fr}
   .btn-primary,.btn-outline{width:100%;justify-content:center}
+  .nav-cta{width:auto}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
