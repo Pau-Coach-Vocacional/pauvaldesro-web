@@ -1,0 +1,13 @@
+// Configuración de Cloudflare. Es la misma que Cloudflare generaba solo en cada
+// deploy, más el bloque "previews" que piden las versiones de prueba de otras ramas.
+{
+  "name": "pauvaldesro-web",
+  "compatibility_date": "2026-09-26",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "."
+  },
+  "previews": {}
+}
