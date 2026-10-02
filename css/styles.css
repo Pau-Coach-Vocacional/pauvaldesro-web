@@ -27,6 +27,14 @@
   --radius: 20px;
 }
 
+/* transición suave entre páginas (Chrome, Edge, Safari 18+; en otros navegadores solo cambia de página) */
+@view-transition{navigation:auto}
+::view-transition-group(*){animation-duration:.55s;animation-timing-function:cubic-bezier(.16,1,.3,1)}
+::view-transition-old(foto-prepa),::view-transition-new(foto-prepa),
+::view-transition-old(foto-uni),::view-transition-new(foto-uni),
+::view-transition-old(foto-padres),::view-transition-new(foto-padres){height:100%;object-fit:cover;overflow:clip}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -286,6 +294,18 @@ nav.scrolled{border-bottom-color:var(--borde);box-shadow:0 8px 24px -12px rgba(3
 .who-card .label{position:absolute;left:22px;right:22px;bottom:22px;z-index:2}
 .who-card h3{color:#fff;font-size:19px;margin-bottom:8px}
 .who-card p{color:#EFE9DE;font-size:13.5px;line-height:1.55}
+a.who-card{display:block;text-decoration:none;color:inherit}
+.who-card .mas{
+  display:inline-flex;align-items:center;margin-top:14px;font-size:12.5px;font-weight:700;letter-spacing:.04em;
+  color:var(--tinta);background:var(--crema);padding:8px 16px;border-radius:100px;
+  opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s;
+}
+.who-card:hover .mas,.who-card:focus-visible .mas{opacity:1;transform:none}
+@media(hover:none){.who-card .mas{opacity:1;transform:none}}
+/* la foto de cada tarjeta "viaja" a la portada de su página (ver css/audiencias.css) */
+.vt-prepa{view-transition-name:foto-prepa}
+.vt-uni{view-transition-name:foto-uni}
+.vt-padres{view-transition-name:foto-padres}
 .padres-box{background:var(--verde-oscuro);color:#fff;border-radius:24px;padding:32px 38px;margin-top:22px}
 .padres-box p{font-size:16px;line-height:1.7;margin:0}
 .padres-box strong{color:var(--dorado)}

@@ -1,0 +1,12 @@
+# Archivos del repo que NO deben publicarse en el sitio
+.git
+.github
+.vscode
+.wrangler
+.claude
+node_modules
+.DS_Store
+.gitignore
+.assetsignore
+wrangler.jsonc
+README.md
