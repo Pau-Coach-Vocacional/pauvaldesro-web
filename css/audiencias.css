@@ -138,6 +138,75 @@
 
 
 /* =========================================================
+   TESTIMONIO EN VIDEO (padres)
+   ========================================================= */
+.vt-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center;max-width:1000px}
+.vt-texto h2{font-size:clamp(30px,3.6vw,44px);line-height:1.1;margin-top:4px}
+.vt-texto p{font-size:16.5px;line-height:1.8;color:var(--tinta-suave);margin-top:20px;max-width:42ch}
+.vt-quien{display:flex;align-items:center;gap:14px;margin-top:30px}
+.vt-ava{width:46px;height:46px;border-radius:50%;background:var(--d-suave);color:var(--d-osc);display:flex;align-items:center;justify-content:center;font-size:18px}
+.vt-quien b{display:block;font-size:15px}
+.vt-quien small{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--d-osc)}
+
+.vt-video{position:relative;justify-self:center;width:100%;max-width:330px}
+/* tarjeta de color detrás, ligeramente girada */
+.vt-video::before{content:'';position:absolute;inset:0;border-radius:34px;background:var(--t-suave);transform:rotate(-5deg) translate(-14px,10px)}
+.vt-marco{position:relative;aspect-ratio:9/16;border-radius:30px;overflow:hidden;background:var(--tinta);
+  box-shadow:0 0 0 8px var(--papel),0 34px 60px -24px rgba(33,27,24,.45)}
+.vt-marco video{width:100%;height:100%;object-fit:cover;display:block}
+.vt-marco::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(33,27,24,.55),rgba(33,27,24,0) 45%);transition:opacity .3s}
+.vt-play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:14px;padding:0 20px 30px;border:0;background:none;cursor:pointer;color:#fff;font:inherit;transition:opacity .3s}
+.vt-play-ico{width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--t-osc);display:flex;align-items:center;justify-content:center;font-size:22px;padding-left:4px;
+  box-shadow:0 0 0 10px rgba(255,255,255,.22);transition:transform .25s,box-shadow .25s}
+.vt-play:hover .vt-play-ico{transform:scale(1.07);box-shadow:0 0 0 14px rgba(255,255,255,.25)}
+.vt-play-txt{font-size:13px;font-weight:600;letter-spacing:.04em}
+.vt-marco.reproduciendo::after,.vt-marco.reproduciendo .vt-play{opacity:0;pointer-events:none}
+
+
+/* =========================================================
+   TESTIMONIOS EN VIDEO (prepa / uni) — abanico, ver js/testimonios.js
+   ========================================================= */
+.voces-head{text-align:center;max-width:640px;margin:0 auto}
+.voces-head h2{font-size:clamp(30px,3.6vw,44px);line-height:1.1;margin-top:4px}
+.voces-head p{font-size:16px;line-height:1.75;color:var(--tinta-suave);margin-top:16px}
+
+.abanico{--w:290px;margin-top:40px;overflow:hidden;padding:30px 0 10px}
+.abanico-mesa{position:relative;height:calc(var(--w) * 16 / 9 + 30px)}
+.tv{
+  position:absolute;left:50%;top:0;width:var(--w);aspect-ratio:9/16;border-radius:30px;overflow:hidden;cursor:pointer;
+  background:var(--tinta);box-shadow:0 0 0 7px var(--papel),0 30px 60px -26px rgba(33,27,24,.5);
+  transition:transform .9s cubic-bezier(.16,1,.3,1),filter .9s,opacity .9s;will-change:transform;
+}
+.tv[data-pos="0"]{z-index:3;transform:translateX(-50%)}
+.tv[data-pos="-1"]{z-index:2;transform:translateX(-118%) translateY(26px) rotate(-8deg) scale(.86);filter:brightness(.8) saturate(.85)}
+.tv[data-pos="1"]{z-index:2;transform:translateX(18%) translateY(26px) rotate(8deg) scale(.86);filter:brightness(.8) saturate(.85)}
+.tv[data-pos="-1"]:hover{transform:translateX(-122%) translateY(18px) rotate(-10deg) scale(.88);filter:none}
+.tv[data-pos="1"]:hover{transform:translateX(22%) translateY(18px) rotate(10deg) scale(.88);filter:none}
+
+/* el póster borroso llena el fondo, así los videos horizontales no dejan franjas negras */
+.tv-fondo{position:absolute;inset:-20px;width:calc(100% + 40px);height:calc(100% + 40px);object-fit:cover;filter:blur(18px) brightness(.7)}
+.tv video{position:relative;width:100%;height:100%;object-fit:contain;display:block}
+.tv.recorte video{object-fit:cover;transform:scale(1.1);transform-origin:50% 100%}
+.tv.horizontal:not(.reproduciendo) video{object-fit:cover}
+.tv::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(33,27,24,.6),rgba(33,27,24,0) 42%);transition:opacity .3s}
+.tv-play{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:12px;padding:0 20px 26px;border:0;background:none;cursor:pointer;color:#fff;font:inherit;transition:opacity .3s}
+.tv[data-pos="-1"] .tv-play,.tv[data-pos="1"] .tv-play{pointer-events:none}
+.tv-ico{width:62px;height:62px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--t-osc);display:flex;align-items:center;justify-content:center;font-size:20px;padding-left:4px;
+  box-shadow:0 0 0 9px rgba(255,255,255,.22);transition:transform .25s,box-shadow .25s,opacity .4s}
+.tv[data-pos="0"]:hover .tv-ico{transform:scale(1.07);box-shadow:0 0 0 13px rgba(255,255,255,.25)}
+.tv:not([data-pos="0"]) .tv-ico{opacity:0}
+.tv-dur{font-size:12.5px;font-weight:600;letter-spacing:.05em;background:rgba(33,27,24,.45);padding:5px 12px;border-radius:100px;backdrop-filter:blur(6px)}
+.tv.reproduciendo::after,.tv.reproduciendo .tv-play{opacity:0;pointer-events:none}
+
+.abanico-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:34px}
+.ab-flecha{width:44px;height:44px;border-radius:50%;border:1px solid var(--borde);background:var(--papel);color:var(--t-osc);font-size:16px;cursor:pointer;transition:background .2s,border-color .2s}
+.ab-flecha:hover{background:var(--t-suave);border-color:var(--t)}
+.ab-puntos{display:flex;gap:8px}
+.ab-puntos button{width:9px;height:9px;padding:0;border:0;border-radius:100px;background:var(--borde);cursor:pointer;transition:width .4s,background .4s}
+.ab-puntos button.on{width:28px;background:var(--d)}
+
+
+/* =========================================================
    PAQUETES (beta) — se llenan desde js/paquetes.js
    ========================================================= */
 .paquetes-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
@@ -213,5 +282,12 @@
   .duo-card{padding:32px 26px}
   .testimonio{grid-template-columns:1fr;text-align:center;justify-items:center;gap:24px}
   .otros{grid-template-columns:1fr}
+  .vt-grid{grid-template-columns:1fr;gap:44px;text-align:center}
+  .vt-texto p{margin-left:auto;margin-right:auto}
+  .vt-quien{justify-content:center;text-align:left}
+  .vt-video{max-width:290px}
+  .abanico{--w:230px}
+  .tv[data-pos="-1"]{transform:translateX(-112%) translateY(22px) rotate(-7deg) scale(.82)}
+  .tv[data-pos="1"]{transform:translateX(12%) translateY(22px) rotate(7deg) scale(.82)}
   .paquete.destacado{order:-1}
 }

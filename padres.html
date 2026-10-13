@@ -107,6 +107,31 @@
   </div>
 </section>
 
+<!-- ============ TESTIMONIO EN VIDEO ============ -->
+<!-- [EDITAR] Cambia el texto y quién habla cuando Pau confirme. -->
+<section class="video-testimonio">
+  <div class="wrap vt-grid">
+    <div class="vt-texto reveal">
+      <span class="eyebrow"><span class="dot"></span>Lo que dicen las familias</span>
+      <h2>Escúchalo de otros <em>papás como tú.</em></h2>
+      <p>Ellos también acompañaron a su hijo en esta decisión. Así vivieron el proceso con Pau, en sus propias palabras.</p>
+      <div class="vt-quien">
+        <span class="vt-ava" aria-hidden="true">♥</span>
+        <div><b>Mamá y papá</b><small>Familia acompañada por Pau</small></div>
+      </div>
+    </div>
+    <div class="vt-video reveal">
+      <div class="vt-marco">
+        <video id="vt-player" src="img/testimonio-padres.mp4" poster="img/testimonio-padres.jpg" preload="none" playsinline></video>
+        <button class="vt-play" type="button" aria-label="Ver testimonio en video">
+          <span class="vt-play-ico">▶</span>
+          <span class="vt-play-txt">Ver testimonio · 0:22</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PAQUETES ============ -->
 <section id="paquetes">
   <div class="wrap">
@@ -156,6 +181,23 @@
   </div>
 </footer>
 
+<script>
+  // Testimonio en video: al dar play se quita la portada y aparecen los controles
+  (function () {
+    var v = document.getElementById('vt-player');
+    if (!v) return;
+    var marco = v.parentNode;
+    marco.querySelector('.vt-play').addEventListener('click', function () {
+      marco.classList.add('reproduciendo');
+      v.controls = true;
+      v.play();
+    });
+    v.addEventListener('ended', function () {
+      marco.classList.remove('reproduciendo');
+      v.controls = false;
+    });
+  })();
+</script>
 <script src="js/paquetes.js"></script>
 <script src="js/main.js"></script>
 </body>
