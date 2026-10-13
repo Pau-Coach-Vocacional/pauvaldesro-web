@@ -28,14 +28,14 @@
       {
         tipo: 'Programa completo', nombre: 'Programa C2C',
         desc: 'De la confusión a la claridad: te conoces, exploras y decides.',
-        precio: '$0,000', nota: 'Precio de ejemplo · pago único o en parcialidades',
-        incluye: ['6 sesiones 1:1 personalizadas', 'Herramientas de autoconocimiento', 'Exploración de carreras y universidades', 'Plan de acción con tus siguientes pasos'],
+        precio: '$18,000', nota: 'Lugares limitados · pago único o en parcialidades',
+        incluye: ['18 sesiones 1:1 de 1 h o 12 de 1 h 30 min', 'Herramientas de autoconocimiento', 'Exploración de carreras y universidades', 'Plan de acción con tus siguientes pasos', 'Seguimiento hasta tu aplicación a las universidades'],
         destacado: true, sello: 'El más elegido', pago: ''
       },
       {
         tipo: 'Con admisión', nombre: 'C2C + Admisión',
         desc: 'El programa completo y te acompaño hasta tu solicitud.',
-        precio: '$0,000', nota: 'Precio de ejemplo',
+        precio: '$24,000', nota: 'Lugares limitados',
         incluye: ['Todo el Programa C2C', 'Acompañamiento en solicitudes y ensayos', 'Seguimiento hasta tu decisión final'],
         pago: ''
       }
@@ -51,15 +51,15 @@
       {
         tipo: 'Programa completo', nombre: 'Replantear mi carrera',
         desc: 'Entendemos qué pasó, qué conservar y qué necesitas ahora.',
-        precio: '$0,000', nota: 'Precio de ejemplo · pago único o en parcialidades',
-        incluye: ['5 sesiones 1:1 personalizadas', 'Análisis de lo que sí y lo que no', 'Alternativas reales: cambiar, ajustar o quedarte', 'Plan para avanzar'],
+        precio: '$12,000', nota: 'Pago único o en parcialidades',
+        incluye: ['8 sesiones 1:1 personalizadas', 'Análisis de lo que sí y lo que no', 'Alternativas reales: cambiar, ajustar o quedarte', 'Plan para avanzar'],
         destacado: true, sello: 'Recomendado', pago: ''
       },
       {
         tipo: 'Con transición', nombre: 'Replantear + Transición',
         desc: 'Si decides cambiar, te acompaño en el cambio.',
-        precio: '$0,000', nota: 'Precio de ejemplo',
-        incluye: ['Todo Replantear mi carrera', 'Revalidación y opciones de cambio', 'Seguimiento durante la transición'],
+        precio: '$18,000', nota: '',
+        incluye: ['18 sesiones 1:1 personalizadas', 'Todo Replantear mi carrera', 'Revalidación y opciones de cambio', 'Seguimiento durante la transición'],
         pago: ''
       }
     ],
@@ -122,7 +122,7 @@
       '<h3>' + esc(p.nombre) + '</h3>' +
       '<p class="desc">' + esc(p.desc) + '</p>' +
       '<p class="precio">' + esc(p.precio) + (p.gratis ? '' : '<small>MXN</small>') + '</p>' +
-      '<p class="nota-precio">' + esc(p.nota) + '</p>' +
+      '<p class="nota-precio">' + (esc(p.nota) || '&nbsp;') + '</p>' +
       '<ul>' + p.incluye.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul>' +
       '<div class="acciones">' + botones + '</div>' +
       '</article>';
