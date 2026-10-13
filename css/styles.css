@@ -376,6 +376,7 @@ footer{background:var(--tinta);color:#A89E90;padding:48px 0;text-align:center;fo
 footer .links{display:flex;gap:28px;justify-content:center;margin-bottom:18px;flex-wrap:wrap}
 footer a{color:var(--dorado);text-decoration:none;font-weight:500}
 footer a:hover{text-decoration:underline}
+footer .sello-icef{display:block;width:110px;height:auto;margin:6px auto 22px}
 
 
 /* =========================================================
